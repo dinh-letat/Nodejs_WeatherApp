@@ -35,6 +35,17 @@ const getWeather = async (location) => {
 const express = require('express');
 // Tạo biến app 
 const app = express();
+
+// Tạo đường dẫn
+const path = require("path");
+
+const pathPublic = path.join(__dirname, '../public');
+console.log(pathPublic)
+
+// Tạo đường dẫn tới static file
+app.use(express.static(pathPublic));
+
+
 // Hiển thị lên localhost: http://localhost:7000
 app.get('/', (req, res) => {
     res.send(`<h1>Hello World</h1> + <a href="">index.js</a>`)
