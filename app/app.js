@@ -48,8 +48,12 @@ app.use(express.static(pathPublic));
 
 // Hiển thị lên localhost: http://localhost:7000
 app.get('/', (req, res) => {
-    res.send(`<h1>Hello World</h1> + <a href="">index.js</a>`)
+    res.render(`./weather1`);
 })
+
+app.set("view engine", "hbs");
+
+
 // Tạo port 
 const port = 7000;
 // app chạy trên môi trường:
