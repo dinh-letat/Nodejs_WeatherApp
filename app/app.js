@@ -37,9 +37,11 @@ const express = require('express');
 const app = express();
 // Hiển thị lên localhost: http://localhost:7000
 app.get('/', (req, res) => {
-    res.send("Hello World")
+    res.send(`<h1>Hello World</h1> + <a href="">index.js</a>`)
 })
+// Tạo port 
+const port = 7000;
 // app chạy trên môi trường:
-app.listen(7000, () => {
-    console.log(`App run on port 7000`);
+app.listen(port, () => {
+    console.log(`App run on port ${port}`);
 });
