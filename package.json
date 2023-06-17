@@ -1,0 +1,26 @@
+{
+  "name": "nodejs_weatherapp",
+  "version": "1.0.0",
+  "description": "WeatherApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app/app.js",
+    "dev": "nodemon app/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinh-letat/Nodejs_WeatherApp.git"
+  },
+  "author": "letatdinh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dinh-letat/Nodejs_WeatherApp/issues"
+  },
+  "homepage": "https://github.com/dinh-letat/Nodejs_WeatherApp#readme",
+  "dependencies": {
+    "async": "^3.2.4",
+    "async-request": "^1.2.0",
+    "nodemon": "^2.0.22"
+  }
+}
