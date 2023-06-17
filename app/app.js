@@ -1,5 +1,6 @@
 const asyncRequest = require('async-request');
 
+// Dựng server
 //
 const getWeather = async (location) => {
     const access_key = "89ff0a7fd7463b01f0bf97e0ca3649c2";
@@ -20,9 +21,25 @@ const getWeather = async (location) => {
         console.log(data);
         return weather;
     } catch (error) {
-        console.log(error);
+        return {
+            isSuccess: false,
+            error,
+        };
     };
     
 }
 
-getWeather("tokyo");
+//getWeather("tokyo");
+
+// Khởi tạo thư viện
+const express = require('express');
+// Tạo biến app 
+const app = express();
+// Hiển thị lên localhost: http://localhost:7000
+app.get('/', (req, res) => {
+    res.send("Hello World")
+})
+// app chạy trên môi trường:
+app.listen(7000, () => {
+    console.log(`App run on port 7000`);
+});
